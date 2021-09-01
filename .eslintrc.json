@@ -32,6 +32,7 @@
       ],
       "no-unused-vars": "off",
       "no-underscore-dangle": "off",
+      "import/no-unresolved":"off",
       "react/no-array-index-key": "off",
       "global-require": "off",
       "prettier/prettier": "off",

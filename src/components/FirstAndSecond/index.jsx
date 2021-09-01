@@ -1,12 +1,12 @@
-import { Sticky } from "../../pages/Home/styles";
+import React from 'react';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import { Sticky } from '../../pages/Home/styles';
 
 function FirstAndSecond() {
   const { scrollYProgress } = useViewportScroll();
 
   const frameOpacity = useTransform(scrollYProgress, [0.196, 0.198], [0, 1]);
-  const frameScale = useTransform(scrollYProgress, [0.558, 0.627], [0.511, 0.8])
-
+  const frameScale = useTransform(scrollYProgress, [0.558, 0.627], [0.511, 0.8]);
 
   return (
     <Sticky className="second">
@@ -21,7 +21,7 @@ function FirstAndSecond() {
           borderRadius: '4px',
           border: '4px solid #fff',
           opacity: frameOpacity,
-          scale: frameScale
+          scale: frameScale,
         }}
       />
     </Sticky>
@@ -43,29 +43,26 @@ function First() {
 
   const rightSideScale = useTransform(scrollYProgress,
     [0.047, 0.093],
-    [0, 0.511]
-    )
+    [0, 0.511]);
   const rightSideY = useTransform(scrollYProgress,
     [0.047, 0.093],
-    ['58vh', '0vh']
-    )
+    ['58vh', '0vh']);
   const offsetY = useTransform(scrollYProgress,
     [0.328, 0.397, 0.461, 0.53],
-    ['0%', '-100%', '-100%','-200%']
-    )
+    ['0%', '-100%', '-100%', '-200%']);
 
   return (
-    <Sticky 
+    <Sticky
       className="first"
       style={{
         scale: firstScale,
-        borderRadius: firstRadius
+        borderRadius: firstRadius,
       }}
     >
       <motion.div
         className="offset"
         style={{
-          y: offsetY
+          y: offsetY,
         }}
       >
         <div className="a">
@@ -85,8 +82,8 @@ function First() {
             />
           </div>
         </div>
-        <div className="b"></div>
-        <div className="c"></div>
+        <div className="b" />
+        <div className="c" />
       </motion.div>
     </Sticky>
   );
