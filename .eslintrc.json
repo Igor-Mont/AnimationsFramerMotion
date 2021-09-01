@@ -34,6 +34,7 @@
       "no-underscore-dangle": "off",
       "react/no-array-index-key": "off",
       "global-require": "off",
+      "prettier/prettier": "off",
       "max-len": "off",
       "import/prefer-default-export": "off",
       "import/extensions": [
